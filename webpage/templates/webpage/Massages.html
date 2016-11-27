@@ -1,0 +1,28 @@
+{% extends "webpage/base.html" %}
+
+{% block title  %}Massages{% endblock  %}
+
+{% block body  %}
+
+
+<div id="images">
+
+<h3> Here is some messages for you </h3><br>
+
+{%if request.user.massage_set.all   %}
+        <div id="images">
+        {% for logo in request.user.massage_set.all %}
+                    <p> {{logo.sub}}</p>
+                    <p> {{logo.massage}}</p> <br> <br>
+        {% endfor %}
+      </div>
+{% else %}
+        <h3> Sorry Updade First </h3><br> <br> <br>
+
+
+{%endif%}
+
+</div>
+
+
+{% endblock  %}

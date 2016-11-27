@@ -1,0 +1,19 @@
+{% extends "webpage/base.html" %}
+
+{% block title  %}Profile of Mr {{db.name}}{% endblock  %}
+
+{% block body  %}
+
+    <div id="profile">
+          <a href ="/webpage/user/{{db.id}}/"> Update Profile </a> <br> <br>
+          <a href ="/webpage/user/{{db.id}}/delete/"> delete profile </a> <br> <br>
+          <a href ="/webpage/user/{{db.id}}/AddImage/"> Upload Image </a> <br> <br>
+          <a href ="/webpage/{{db.nick_name}}/Images"> Photos </a> <br> <br>
+          <a href ="/webpage/user/{{db.id}}/AddData/"> Update About </a> <br> <br>
+          <a href ="/webpage/{{db.nick_name}}/Data"> About </a> <br> <br>
+
+          {%if Error_massage%}
+                  <h3> {{Error_massage}} </h3>
+           {%endif%}
+      </div>
+{% endblock  %}

@@ -1,0 +1,23 @@
+{% extends "webpage/base.html" %}
+
+{% block title  %} AddUser {% endblock  %}
+
+{% block body  %}
+
+<div class="container-fluid">
+
+    <form class="form-horizontal", action="", method="post" ,enctype="multipart/form-data">
+          {% csrf_token %}
+          {% include "webpage/AddUser.html" %}
+          <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                    <br>
+                    <button type="submit" class="btn btn-success"> Add </button>
+
+              </div>
+          </div>
+    </form>
+
+</div>
+
+{% endblock  %}

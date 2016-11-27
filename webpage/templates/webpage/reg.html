@@ -1,0 +1,34 @@
+{% extends "webpage/base_login.html" %}
+
+{% block title  %} Create Account {% endblock  %}
+
+{% block body  %}
+
+<div class="container-fluid">
+
+    <form class="form-horizontal", action="", method="post" ,enctype="multipart/form-data">
+          {% csrf_token %}
+          {% include "webpage/AddUser.html" %}
+          <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                    <br>
+                    <button type="submit" class="btn btn-success"> Create Account </button>
+                     <br> <br>
+
+
+                        Already have an account? <a href="{% url 'webpage:login' %}">Click here</a> to log in.
+
+
+
+              </div>
+
+
+
+          </div>
+
+
+    </form>
+
+</div>
+
+{% endblock  %}

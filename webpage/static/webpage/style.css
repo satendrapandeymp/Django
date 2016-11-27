@@ -1,0 +1,32 @@
+ body {
+   background: white url('images/index.jpg');
+  }
+
+#profile {
+  margin-left: 1cm;
+  margin-top: 1cm;
+}
+
+#register {
+  margin-left: 1cm;
+  margin-top: 1cm;
+}
+
+#login {
+  margin-left: 1cm;
+  margin-top: 1cm;
+}
+
+#home {
+  font-size: 22px;
+  margin-left: 1cm;
+  margin-top: 1cm;
+}
+
+#images {
+  font-size: 22px;
+  margin-left: 1cm;
+  margin-top: 0cm;
+  font-style: italic;
+  font-weight: normal;
+}

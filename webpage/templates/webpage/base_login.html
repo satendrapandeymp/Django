@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title  %}Login Page{% endblock  %}</title>
+
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+    <link rel="stylesheet" type="text/css" href= "{% static '/webpage/style.css' %}">
+  </head>
+
+
+  <body>
+          <nav class="navbar navbar-inverse">
+                    <div class="collapse navbar-collapse" id="#topNavbar">
+                            <ul class="nav navbar-nav">
+                                    <li class="">
+                                          <a href="{% url 'webpage:login' %}">
+                                            <span class = "glyphicon glyphicon-home" area-hidden = "true" > </span> &nbsp;Login
+                                          </a>
+                                    </li>
+
+                                    <li class="">
+                                          <a href="{% url 'webpage:reg' %}">
+                                            <span class = "glyphicon glyphicon-user" area-hidden = "true" > </span> &nbsp;Register
+                                          </a>
+                                    </li>
+                            </ul>
+
+
+
+                    </div>
+          </nav>
+
+
+          {% block body  %}
+
+          {% endblock  %}
+
+  </body>
+</html>

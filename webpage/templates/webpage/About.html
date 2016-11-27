@@ -1,0 +1,29 @@
+{% extends "webpage/base.html" %}
+
+{% block title  %}About Mr {{db.name}}{% endblock  %}
+
+{% block body  %}
+
+
+<div id="images">
+
+<h3> Here is something about you </h3><br>
+
+{%if db.data_set.all%}
+        <div id="images">
+        {% for logo in db.data_set.all %}
+                    <p> {{logo.about}}</p>
+                    <p> {{logo.mobile}}</p>
+                    <p> {{logo.email}}</p>
+        {% endfor %}
+      </div>
+{% else %}
+        <h3> Sorry Updade First </h3><br> <br> <br>
+
+
+{%endif%}
+
+</div>
+
+
+{% endblock  %}
